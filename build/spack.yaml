@@ -1,0 +1,26 @@
+spack:
+  view: false
+  config:
+    install_tree:
+      root: '$spack/../software'
+  concretizer:
+    unify: when_possible
+  include:
+  - packages.yaml
+  - modules.yaml
+
+  definitions:
+  # WARNING: Placing variants here breaks things when used as [$%compilers]
+  - gcc:
+    - gcc@12.2.0
+
+  - oneapi:
+    - oneapi@2023.0.0
+
+  - hpl:
+    - hpl@2.3 +openmp
+
+  specs:
+    - matrix:
+      - [$hpl]
+      - [$%oneapi]
