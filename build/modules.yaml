@@ -5,6 +5,19 @@ modules:
     roots:
       tcl: '$spack/../modules'
     arch_folder: false
+    tcl:
+        exclude_implicits: true
+        hash_length: 0
+        projections:
+          all: '{name}/{version}'
+        all:
+          conflict:
+          - '{name}'
+          environment:
+            set:
+              '{name}_ROOT': '{prefix}'
+              OMPI_MCA_btl: self,vader
+              OMPI_MCA_pml: ucx
   prefix_inspections:
     bin:
       - PATH

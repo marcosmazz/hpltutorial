@@ -8,7 +8,8 @@ packages:
       prefix: /ccad/stack/23.02/base/linux-rocky9-broadwell/gcc-12.2.0/openmpi-4.1.4-olpnqaqkqy7xxf26653hwdpsc42tno6w
 
   intel-oneapi-mkl:
-    require: '@2023.1.0 threads=openmp +cluster'
+#    require: '@2023.1.0 threads=openmp +cluster'
+    require: '@2023.1.0 threads=openmp +cluster %oneapi'
 
   blas:
     require: 'intel-oneapi-mkl'

@@ -1,5 +1,6 @@
-build/spack.lock
-build/.spack-env
-software
-spack
-modules
+/build/spack.lock
+/build/.spack-env
+/software
+/spack
+/modules
+build.log

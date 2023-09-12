@@ -28,6 +28,6 @@ cd build
 rm -rf .spack-env/ spack.lock
 spack env activate .
 spack concretize -f
-spack install --fresh -v -y
+spack install --fresh -v -y -j4
 spack module tcl refresh -y
 spack env deactivate
