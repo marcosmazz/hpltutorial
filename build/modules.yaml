@@ -9,7 +9,7 @@ modules:
         exclude_implicits: true
         hash_length: 0
         projections:
-          all: '{name}/{version}'
+          all: '{name}/{compiler.name}-{^blas.name}'
         all:
           conflict:
           - '{name}'

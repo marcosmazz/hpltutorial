@@ -3,8 +3,8 @@ spack:
   config:
     install_tree:
       root: '$spack/../software'
-#  concretizer:
-#    unify: when_possible
+  concretizer:
+    unify: when_possible
   include:
   - packages.yaml
   - modules.yaml
@@ -23,4 +23,9 @@ spack:
   specs:
     - matrix:
       - [$hpl]
+      - [$%gcc]
+      - [^intel-oneapi-mkl,^openblas]
+    - matrix:
+      - [$hpl]
       - [$%oneapi]
+      - [^intel-oneapi-mkl%oneapi,^openblas]

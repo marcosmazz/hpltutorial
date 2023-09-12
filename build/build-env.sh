@@ -2,7 +2,8 @@
 set -euo pipefail
 
 SPACK_REPO="https://github.com/spack/spack.git"
-SPACK_TAG="releases/v0.20"
+#SPACK_TAG="releases/v0.20"
+SPACK_TAG="develop"
 
 export SPACK_USER_CONFIG_PATH=/var/empty
 
