@@ -6,9 +6,32 @@ cd hpltutorial/build
 <tmux> ./build-env.sh
 58min...
 
-<edit HPL.dat>
+hpltutorial
+├── build
+│   ├── build-env.sh
+│   ├── modules.yaml
+│   ├── packages.yaml
+│   └── spack.yaml
+├── modules
+│   └── hpl
+│       ├── gcc-intel-oneapi-mkl
+│       ├── gcc-openblas
+│       ├── oneapi-intel-oneapi-mkl
+│       └── oneapi-openblas
+├── run
+│   ├── HPL.dat
+│   └── submit.sh
+├── software
+│   └── linux-rocky9-broadwell
+│       ├── gcc-12.2.0
+│       └── oneapi-2023.0.0
+└── spack
+    └── ...
 
-module use ../modules
-module load hpl
-srun xhpl
+cd run
+
+<edit HPL.dat>
+<edit submit.sh>
+
+sbatch submit.sh
 ```
