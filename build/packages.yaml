@@ -1,6 +1,7 @@
 packages:
   mpi:
     require: 'openmpi'
+
   openmpi:
     buildable: False
     externals:
@@ -9,9 +10,6 @@ packages:
 
   intel-oneapi-mkl:
     require: '@2023.1.0 threads=openmp +cluster'
-#    require: '@2023.1.0 threads=openmp +cluster %oneapi'
 
-#  blas:
-#    require: 'intel-oneapi-mkl'
   openblas:
     require: '@0.3.23 threads=openmp'

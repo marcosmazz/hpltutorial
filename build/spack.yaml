@@ -10,7 +10,6 @@ spack:
   - modules.yaml
 
   definitions:
-  # WARNING: Placing variants here breaks things when used as [$%compilers]
   - gcc:
     - gcc@12.2.0
 
@@ -25,6 +24,7 @@ spack:
       - [$hpl]
       - [$%gcc]
       - [^intel-oneapi-mkl,^openblas]
+
     - matrix:
       - [$hpl]
       - [$%oneapi]
