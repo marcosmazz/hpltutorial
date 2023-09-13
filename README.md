@@ -3,8 +3,8 @@
 ssh mulatona.ccad.unc.edu.ar
 git clone git@github.com:marcosmazz/hpltutorial.git
 cd hpltutorial/build
-<tmux> ./build-env.sh
-58min...
+<tmux> ./build-env.sh 2>&1 | tee build.log
+4 hours later...
 
 hpltutorial
 ├── build
@@ -29,9 +29,12 @@ hpltutorial
     └── ...
 
 cd run
+<edit submit.sh>
+<if build avoided>:
+module use /home/shared/tutorial/modules
+module load hpl/oneapi-intel-oneapi-mkl or <other>
 
 <edit HPL.dat>
-<edit submit.sh>
 
 sbatch submit.sh
 ```
