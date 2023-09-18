@@ -4,7 +4,7 @@
 #SBATCH --ntasks-per-node=32
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=multi
-#SBATCH --reservation=tutorial
+#SBATCH --reservation=hpltutorial
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 export MKL_NUM_THREADS=$SLURM_CPUS_PER_TASK
