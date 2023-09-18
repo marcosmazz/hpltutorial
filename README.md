@@ -1,7 +1,7 @@
 # HPL Spack build
 ```
 ssh hpltutorial@mulatona.ccad.unc.edu.ar
-git clone git@github.com:marcosmazz/hpltutorial.git
+git clone https://github.com/marcosmazz/hpltutorial.git
 cd hpltutorial/build
 <tmux> ./build-env.sh 2>&1 | tee build.log
 4 hours later...
