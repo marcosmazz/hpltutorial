@@ -38,3 +38,6 @@ module load hpl/oneapi-intel-oneapi-mkl or <other>
 
 sbatch submit.sh
 ```
+
+## Cuentas
+https://forms.gle/5gxaMVcG2gm2zTDy5
